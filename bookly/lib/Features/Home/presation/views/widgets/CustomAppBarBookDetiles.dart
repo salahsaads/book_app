@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class CustomAppBarBookDetailsView extends StatelessWidget {
@@ -10,7 +9,10 @@ class CustomAppBarBookDetailsView extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+            
+          },
           icon: const Icon(Icons.close),
         ),
         IconButton(
