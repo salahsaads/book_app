@@ -29,7 +29,7 @@ class Home_View_body extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 24),
                 child: Text(
-                  'Best Seller',
+                  'Newset Books',
                   style: Style.textStyle18.copyWith(fontFamily: Kfont),
                 ),
               ),
