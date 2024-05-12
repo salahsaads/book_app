@@ -3,9 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class CustomListViewItem extends StatelessWidget {
-  const CustomListViewItem({
-    super.key,
-  });
+  const CustomListViewItem({super.key, required this.ImageUrl});
+  final String ImageUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -13,12 +12,10 @@ class CustomListViewItem extends StatelessWidget {
       aspectRatio: 2.7 / 4,
       child: Container(
         decoration: BoxDecoration(
-            color: Colors.red,
             borderRadius: BorderRadius.circular(16),
             image: DecorationImage(
-                image: AssetImage(AssatsData.testImage), fit: BoxFit.cover)),
+                image: NetworkImage(ImageUrl), fit: BoxFit.cover)),
       ),
     );
   }
 }
-

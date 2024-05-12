@@ -22,7 +22,9 @@ class Bookdetailsviewbody extends StatelessWidget {
               CustomAppBarBookDetailsView(),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: width * .2),
-                child: CustomListViewItem(),
+                child: CustomListViewItem(
+                  ImageUrl: 'https://picsum.photos/250?image=9',
+                ),
               ),
               const SizedBox(
                 height: 43,
@@ -75,7 +77,9 @@ class SimilerListeViewItem extends StatelessWidget {
           itemBuilder: (context, index) {
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8),
-              child: CustomListViewItem(),
+              child: CustomListViewItem(
+                ImageUrl: 'https://picsum.photos/250?image=9',
+              ),
             );
           }),
     );
