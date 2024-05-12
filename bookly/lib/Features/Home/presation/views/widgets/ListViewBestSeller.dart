@@ -2,6 +2,7 @@ import 'package:bookly/Features/Home/presation/views/widgets/BestSellerItem.dart
 import 'package:bookly/Features/Home/presation/views_model/newset%20book/newset_book_cubit.dart';
 import 'package:bookly/core/Widgets/Custom_error.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class BestSellerListView extends StatelessWidget {
@@ -30,8 +31,16 @@ class BestSellerListView extends StatelessWidget {
             errMessage: state.errMessage,
           );
         } else {
-          return const Center(
-            child: CircularProgressIndicator(),
+          return Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: MediaQuery.sizeOf(context).height / 3,
+                ),
+                CircularProgressIndicator(),
+              ],
+            ),
           );
         }
       },
